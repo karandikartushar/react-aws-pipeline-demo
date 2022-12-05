@@ -14,3 +14,8 @@ to add new file/changes:
 11. git add .
 12. git commit -m "update add.help"
 13. git push origin master
+
+git status
+git remote remove origin
+
+AWS react js ci/cd pileline: https://www.youtube.com/watch?v=zkNdHv1iMgY
