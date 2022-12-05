@@ -21,3 +21,41 @@ git status
 git remote remove origin
 
 AWS react js ci/cd pileline: https://www.youtube.com/watch?v=zkNdHv1iMgY
+
+yamel file: 
+=========
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on 'date'
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build
+  
+bucket policy:
+=============
+{
+    "Version": "2012-10-17",
+	"Id": "Policy34324234"
+    "Statement": [
+        {
+            "Sid": "AddCannedAcl",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::react-aws-pipeline-demo/*",
+        }
+    ]
+}
