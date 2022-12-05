@@ -5,6 +5,8 @@ https://www.youtube.com/watch?v=vbQ2bYHxxEA
 3. tun "npx create-react-app react-aws-pipeline-demo"
 4. create git repo name : react-aws-pipeline-demo
 5. on cmd go to C:\Users\Admin\react-aws-pipeline-demo
+git config --global user.email "tusharkarandikar@gmail.com"
+git config --global user.name "Tushar"
 6. run "git init"
 7. git add .
 8. git commit -m "First Commit"
